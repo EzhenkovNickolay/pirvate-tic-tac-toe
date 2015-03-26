@@ -3,6 +3,7 @@
 		<title>Tic-tac-toe</title>
 		<link rel="shortcut icon" href="3.png" type="image/x-icon">
 		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="font.css" type="text/css">
 		<script src="script.js"></script>
 	</head>
 	<body>		
@@ -129,6 +130,27 @@
 				<p id="human-definition" class="partner-definition">Human</p>
 			</div>
 		</div>
-		<img class="score-desk" src="desk.png">
+		<div class="score-desk">
+			<table class="score-table">
+				<tr>
+					<td>
+						<p class="score-title">You</p>
+						<img src="list.png" class="partner-icon">
+					</td>
+					<td>
+						<img src="stone.png" class="partner-icon">
+						<p class="score-title">Friend</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p id="my-score"class="score">0</p>
+					</td>
+					<td>
+						<p id="partner-score"class="score">0</p>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</body
 </html>
