@@ -7,7 +7,7 @@
 		<script src="script.js"></script>
 	</head>
 	<body>		
-		<div class="tic-tac-wrap">
+		<div id="tic-tac-wrap" class="tic-tac-wrap">
 			<div class="tic-tap" onclick="push('1-1')">
 				<div id="round-1-1" class="round"></div>
 				<div id="cross-1-1" class="cross"></div>				
@@ -111,7 +111,7 @@
 		</div>
 		
 		<div id="menu-bar" class="menu-bar">
-			<button class="but-menu" onclick="single()">Single play</button>
+			<button class="but-menu" onclick="singleGame()">Single play</button>
 			<button class="but-menu">Settings</button>
 			<button class="but-menu">About</button>
 		</div>
@@ -129,6 +129,11 @@
 				<img id="human-image" src="stan.png" class="partner-image">
 				<p id="human-definition" class="partner-definition">Human</p>
 			</div>
+		</div>
+		<div id="onemore" class="onemore">
+			<p class="onemore-definition">Try again?</p>
+			<button class="onemoreButton">Yeap</button>
+			<button class="onemoreButton">Nope</button>
 		</div>
 		<div id="score-desk" class="score-desk">
 			<table class="score-table">

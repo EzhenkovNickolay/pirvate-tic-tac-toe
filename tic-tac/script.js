@@ -13,27 +13,20 @@ function push(number){
 				round.style.display = 'block'; 
 			}		
 			i++;
-		}
-	
-		var round11 = document.getElementById('round-1-1');
-		var round12 = document.getElementById('round-1-2');
-		var round13 = document.getElementById('round-1-3');
-		if(round11.style.display == 'block' && round12.style.display == 'block' && round13.style.display == 'block'){
-			var line = document.getElementById('line-1-2-3');
-			line.style.display = 'block';
-			alert('Game Over!!!');
-			gameover = true;
-		}
+		}		
 		if(i==25){
 			alert('Draw!!!');
 			gameover = true;
+			onemoreGame();
 		}
 	}
 }
 
-function single(){
+function singleGame(){
 	var content = document.getElementById('menu-bar');
 	content.style.display = 'none';
+	var panel = document.getElementById('partner-panel');
+	panel.style.display = 'block';
 }
 
 function growUpImage(defId, imgId){	
@@ -54,4 +47,20 @@ function growDownImage(defId, imgId){
 	var image  =  document.getElementById(imgId);
 	image.style.height = '80%';
 	image.style.width = '80%';
+}
+
+function startWithHuman(){
+	var panel = document.getElementById('partner-panel');
+	panel.style.display = 'none';
+
+	var content = document.getElementById('tic-tac-wrap');
+	content.style.display = 'block';
+	
+	var desk = document.getElementById('score-desk');
+	desk.style.display = 'block';
+}
+
+function onemoreGame(){
+	var onemore = document.getElementById('onemore');
+	onemore.style.display = 'block';
 }

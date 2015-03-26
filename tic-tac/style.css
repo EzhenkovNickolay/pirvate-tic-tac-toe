@@ -12,7 +12,7 @@ body{
   border: solid 20px green;
   margin-left: -320px;
   margin-top: -340px;
-  /*display:none;*/
+  display:none;
 }
 
 .tic-tap{
@@ -52,7 +52,7 @@ button{
   background-image: url(desk.png);
   background-repeat:round;
   text-align:center;
-  /*display:none;*/
+  display:none;
 }
 
 .score-table{
@@ -89,7 +89,6 @@ button{
   left: 50%;
   margin-left: -200px;
   margin-top: -165px;
-  display:none;
 }
 
 .but-menu{
@@ -155,4 +154,43 @@ button{
   border-radius: 25%;
   box-sizing: border-box;
   display:none;
+}
+
+.onemore{
+  width: 380px;
+  height: 115px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -190px;
+  margin-top: -150px;
+  text-align: center;
+  background-color: rgba(18, 173, 42, 0.9);
+  border: solid 1px black;
+  border-radius: 70px;
+  box-sizing: border-box;
+  display:none;
+}
+
+.onemore-definition{
+	font: 35px Grape Soda;
+	margin: 0;
+	color: white;
+}
+
+.onemoreButton{
+  margin: 15px 15px;
+  width: 103px;
+  height: 35px;
+  background-color: rgb(112, 39, 195);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font: 25px Grape Soda;
+}
+
+.onemoreButton:hover{
+	cursor:pointer;
+	background-color: white;
+	color: rgb(112, 39, 195);
 }
