@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Grape Soda";
+    src: url(GrapeSoda.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "LC Chalk";
+    src: url(LC_Chalk.ttf) format("truetype");
+}
