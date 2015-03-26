@@ -64,3 +64,23 @@ function onemoreGame(){
 	var onemore = document.getElementById('onemore');
 	onemore.style.display = 'block';
 }
+
+function mainMenu(){
+	var onemore = document.getElementById('onemore');
+	onemore.style.display = 'none';
+
+	var content = document.getElementById('tic-tac-wrap');
+	content.style.display = 'none';
+
+	var desk = document.getElementById('score-desk');
+	desk.style.display = 'none';
+
+	var content = document.getElementById('menu-bar');
+	content.style.display = 'block';
+
+	clean('0');
+}
+
+function clean(dept){
+
+}
