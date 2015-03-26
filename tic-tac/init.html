@@ -1,0 +1,134 @@
+<html>
+	<head>
+		<title>Tic-tac-toe</title>
+		<link rel="shortcut icon" href="3.png" type="image/x-icon">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<script src="script.js"></script>
+	</head>
+	<body>		
+		<div class="tic-tac-wrap">
+			<div class="tic-tap" onclick="push('1-1')">
+				<div id="round-1-1" class="round"></div>
+				<div id="cross-1-1" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('1-2')">
+				<div id="round-1-2" class="round"></div>
+				<div id="cross-1-2" class="cross"></div>
+			</div>
+			<div class="tic-tap" onclick="push('1-3')">
+				<div id="round-1-3" class="round"></div>
+				<div id="cross-1-3" class="cross"></div>			
+			</div>
+			<div class="tic-tap" onclick="push('1-4')">
+				<div id="round-1-4" class="round"></div>
+				<div id="cross-1-4" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('1-5')">
+				<div id="round-1-5" class="round"></div>
+				<div id="cross-1-5" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('2-1')">
+				<div id="round-2-1" class="round"></div>
+				<div id="cross-2-1" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('2-2')">
+				<div id="round-2-2" class="round"></div>
+				<div id="cross-2-2" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('2-3')">
+				<div id="round-2-3" class="round"></div>
+				<div id="cross-2-3" class="cross"></div>			
+			</div>
+			<div class="tic-tap" onclick="push('2-4')">
+				<div id="round-2-4" class="round"></div>
+				<div id="cross-2-4" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('2-5')">
+				<div id="round-2-5" class="round"></div>
+				<div id="cross-2-5" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('3-1')">
+				<div id="round-3-1" class="round"></div>
+				<div id="cross-3-1" class="cross"></div>
+			</div>
+			<div class="tic-tap" onclick="push('3-2')">
+				<div id="round-3-2" class="round"></div>
+				<div id="cross-3-2" class="cross"></div>			
+			</div>
+			<div class="tic-tap" onclick="push('3-3')">
+				<div id="round-3-3" class="round"></div>
+				<div id="cross-3-3" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('3-4')">
+				<div id="round-3-4" class="round"></div>
+				<div id="cross-3-4" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('3-5')">
+				<div id="round-3-5" class="round"></div>
+				<div id="cross-3-5" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('4-1')">
+				<div id="round-4-1" class="round"></div>
+				<div id="cross-4-1" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('4-2')">
+				<div id="round-4-2" class="round"></div>
+				<div id="cross-4-2" class="cross"></div>			
+			</div>
+			<div class="tic-tap" onclick="push('4-3')">
+				<div id="round-4-3" class="round"></div>
+				<div id="cross-4-3" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('4-4')">
+				<div id="round-4-4" class="round"></div>
+				<div id="cross-4-4" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('4-5')">
+				<div id="round-4-5" class="round"></div>
+				<div id="cross-4-5" class="cross"></div>
+			</div>
+			<div class="tic-tap" onclick="push('5-1')">
+				<div id="round-5-1" class="round"></div>
+				<div id="cross-5-1" class="cross"></div>			
+			</div>
+			<div class="tic-tap" onclick="push('5-2')">
+				<div id="round-5-2" class="round"></div>
+				<div id="cross-5-2" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('5-3')">
+				<div id="round-5-3" class="round"></div>
+				<div id="cross-5-3" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('5-4')">
+				<div id="round-5-4" class="round"></div>
+				<div id="cross-5-4" class="cross"></div>				
+			</div>
+			<div class="tic-tap" onclick="push('5-5')">
+				<div id="round-5-5" class="round"></div>
+				<div id="cross-5-5" class="cross"></div>				
+			</div>
+		</div>
+		
+		<div id="menu-bar" class="menu-bar">
+			<button class="but-menu" onclick="single()">Single play</button>
+			<button class="but-menu">Settings</button>
+			<button class="but-menu">About</button>
+		</div>
+		<div id="partner-panel" class="partner-panel">
+			<p class="panel-title">Please, choose the partner</p>
+			<div id="computer-partner" class="human-computer-partner" onclick="startWithComputer()"  
+			onmouseover="growUpImage('computer-definition', 'computer-image')" 
+			onmouseout="growDownImage('computer-definition', 'computer-image')">
+				<img id="computer-image" src="computer.png" class="partner-image">
+				<p id="computer-definition" class="partner-definition">Computer</p>
+			</div>
+			<div id="human-partner" class="human-computer-partner" onclick="startWithHuman()" 
+			onmouseover="growUpImage('human-definition', 'human-image')" 
+			onmouseout="growDownImage('human-definition', 'human-image')">
+				<img id="human-image" src="stan.png" class="partner-image">
+				<p id="human-definition" class="partner-definition">Human</p>
+			</div>
+		</div>
+		<img class="score-desk" src="desk.png">
+	</body
+</html>
