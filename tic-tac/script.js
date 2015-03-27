@@ -1,19 +1,17 @@
-var i = 0;
-var gameover = false;
 
 function push(elem){
 	if(!gameover){
 		var d = document.getElementById(elem);
 		if(d.innerHTML == ''){
-			if(i%2==0){
+			if(currentStep % 2 == 0){
 				d.innerHTML = '<div class="round">';
 			}
 			else{
 				d.innerHTML = '<div class="cross">';
 			}		
-			i++;
-		}		
-		if(i==25){
+			currentStep++;
+		}
+		if(currentStep == maxStep){
 			alert('Draw!!!');
 			gameover = true;
 			onemoreGame();
@@ -77,9 +75,23 @@ function mainMenu(){
 	var content = document.getElementById('menu-bar');
 	content.style.display = 'block';
 
-	clean('0');
+	clean(initStep, initMaxStep);
 }
 
-function clean(dept){
+function nextRound(){
+	var onemore = document.getElementById('onemore');
+	onemore.style.display = 'none';
 
+	currentRound++;
+	clean(currentRound, currentRound + initMaxStep);
+}
+
+function clean(curStep, mStep){
+	for(var id = 0; id < initMaxStep; id++){
+		var d = document.getElementById(id+1);
+		d.innerHTML = '';
+	}
+	currentStep = curStep;
+	maxStep = mStep;
+	gameover = false;
 }
