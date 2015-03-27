@@ -25,7 +25,6 @@ body{
 }
 
 .round{
-	display:none;	
 	width: 110px;
 	height: 110px;
 	background-image: url(stone.png);
@@ -33,7 +32,6 @@ body{
 }
 
 .cross{
-	display:none;
 	width: 110px;
 	height: 110px;
 	background-image: url(list.png);

@@ -1,16 +1,15 @@
 var i = 0;
 var gameover = false;
 
-function push(number){
+function push(elem){
 	if(!gameover){
-		var round = document.getElementById('round-'+number);
-		var cross = document.getElementById('cross-'+number);
-		if(round.style.display == '' && cross.style.display == ''){
+		var d = document.getElementById(elem);
+		if(d.innerHTML == ''){
 			if(i%2==0){
-				cross.style.display = 'block';
+				d.innerHTML = '<div class="round">';
 			}
 			else{
-				round.style.display = 'block'; 
+				d.innerHTML = '<div class="cross">';
 			}		
 			i++;
 		}		
@@ -83,17 +82,4 @@ function mainMenu(){
 
 function clean(dept){
 
-}
-
-function createDiv(elem, idParam){
-	var d = document.getElementById(elem);
-	if(d.innerHTML == ''){	
-		if(i%2==0){
-			d.innerHTML += '<div id="'+idParam+'" class="round">';
-		}
-		else{
-			d.innerHTML += '<div id="'+idParam+'" class="cross">';
-		}		
-		i++;
-	}
 }
