@@ -86,12 +86,14 @@ function clean(dept){
 }
 
 function createDiv(elem, idParam){
-	var d = document.getElementById(elem);	
-	if(i%2==0){
-		d.innerHTML += '<div id="'+idParam+'" class="round">';
+	var d = document.getElementById(elem);
+	if(d.innerHTML == ''){	
+		if(i%2==0){
+			d.innerHTML += '<div id="'+idParam+'" class="round">';
+		}
+		else{
+			d.innerHTML += '<div id="'+idParam+'" class="cross">';
+		}		
+		i++;
 	}
-	else{
-		d.innerHTML += '<div id="'+idParam+'" class="cross">';
-	}		
-	i++;
 }
