@@ -207,3 +207,12 @@ button{
 .to-prev-page:hover{
 	cursor: url(cursors/link.cur), pointer;
 }
+/*chameleon picture*/
+.chameleon{
+	position: absolute;
+	top: 100%;
+	left: 100%;
+	margin-left: -500px;
+	margin-top: -326px;
+	width: 500px;
+}
