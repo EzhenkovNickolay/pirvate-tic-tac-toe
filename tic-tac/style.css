@@ -212,7 +212,8 @@ button{
 	position: absolute;
 	top: 100%;
 	left: 100%;
-	margin-left: -500px;
-	margin-top: -326px;
-	width: 500px;
+	margin-left: -25%;
+	margin-top: -18%;
+	width: 25%;
+	height: 35%;
 }
