@@ -1,6 +1,7 @@
 body{
 	background-image:url(lug.jpg);
 	background-repeat:round;
+	cursor: url(cursors/normal.cur), pointer;
 }
 
 .tic-tac-wrap{
@@ -65,7 +66,7 @@ button{
 .partner-icon{
 	width:35px;
 	height:35px;
-	  vertical-align: sub;
+	vertical-align: sub;
 }
 
 .score-title{
@@ -103,7 +104,7 @@ button{
 
 .but-menu:hover{
 	background-color: rgba(0, 100, 0, 0.9);
-	cursor:pointer;
+	cursor: url(cursors/link.cur), pointer;
 }
 
 .partner-definition{
@@ -128,7 +129,7 @@ button{
 }
 
 .human-computer-partner:hover{
-	cursor:pointer;
+	cursor: url(cursors/link.cur), pointer;
 }
 
 .panel-title{
@@ -188,7 +189,7 @@ button{
 }
 
 .onemoreButton:hover{
-	cursor:pointer;
+	cursor: url(cursors/link.cur), pointer;
 	background-color: white;
 	color: rgb(112, 39, 195);
 }
