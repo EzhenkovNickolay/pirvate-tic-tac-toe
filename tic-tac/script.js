@@ -42,6 +42,9 @@ function growDownImage(defId, imgId){
 }
 /*na4alo igri s 4elovekom*/
 function startWithHuman(){
+	myScore = 0;
+	partnerScore = 0;
+
 	var panel = document.getElementById('partner-panel');
 	panel.style.display = 'none';
 
@@ -50,6 +53,12 @@ function startWithHuman(){
 
 	var desk = document.getElementById('score-desk');
 	desk.style.display = 'block';
+
+	var score = document.getElementById('my-score');
+	score.innerHTML = myScore;
+
+	score = document.getElementById('partner-score');
+	score.innerHTML = partnerScore;
 
 	currentPage = 'game';
 }
@@ -98,9 +107,19 @@ function clean(curStep, mStep){
 		var d = document.getElementById(id+1);
 		d.innerHTML = '';
 	}
+
 	currentStep = curStep;
 	maxStep = mStep;
 	gameover = false;
+
+	if(currentStep % 2 == 0){
+		document.getElementById('score-title-you').style.color = 'red';
+		document.getElementById('score-title-friend').style.color = 'white';
+	}
+	else{
+		document.getElementById('score-title-you').style.color = 'white';
+		document.getElementById('score-title-friend').style.color = 'red';
+	}
 }
 /*K prediduwei stranice */
 function backToPrevPage(){
@@ -118,10 +137,33 @@ function push(elem){
 		var d = document.getElementById(elem);
 		if(d.innerHTML == ''){
 			if(currentStep % 2 == 0){
-				d.innerHTML = '<div class="round">';
+				d.innerHTML = '<div class="cross">';
+				document.getElementById('score-title-you').style.color = 'white';
+				document.getElementById('score-title-friend').style.color = 'red';
 			}
 			else{
-				d.innerHTML = '<div class="cross">';
+				d.innerHTML = '<div class="round">';
+				document.getElementById('score-title-you').style.color = 'red';
+				document.getElementById('score-title-friend').style.color = 'white';
+			}
+			for(var i in arr){
+				var result = checkVictory(arr[i]);
+				if(result == 'cross'){
+					alert('cross win');
+					myScore++;
+					document.getElementById('my-score').innerHTML = myScore;
+					gameover = true;
+					onemoreGame();
+					break;
+				}
+				else if(result =='round'){
+					partnerScore++;
+					document.getElementById('partner-score').innerHTML = partnerScore;
+					alert('round win');
+					gameover = true;
+					onemoreGame();
+					break;
+				}
 			}
 			currentStep++;
 		}
@@ -131,4 +173,27 @@ function push(elem){
 			onemoreGame();
 		}
 	}
+}
+/*Proverka na pobedy */
+function checkVictory(numbers){
+	var flag = 'none';
+	var arr = numbers.split(',');
+	var firstItem = document.getElementById(arr[0]).getElementsByTagName('div')[0];
+	var secondItem = document.getElementById(arr[1]).getElementsByTagName('div')[0];
+	var thirdItem = document.getElementById(arr[2]).getElementsByTagName('div')[0];
+	var fourthItem = document.getElementById(arr[3]).getElementsByTagName('div')[0];
+	if(firstItem && secondItem && thirdItem && fourthItem){
+		firstItem = firstItem.className;
+		secondItem = secondItem.className;
+		thirdItem = thirdItem.className;
+		fourthItem = fourthItem.className;
+
+		if(firstItem == 'round' && secondItem == 'round' && thirdItem == 'round' && fourthItem == 'round'){
+			flag = 'round';
+		}
+		if(firstItem == 'cross' && secondItem == 'cross' && thirdItem == 'cross' && fourthItem == 'cross'){
+			flag = 'cross';
+		}
+	}
+	return flag;
 }
