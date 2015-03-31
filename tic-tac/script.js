@@ -123,6 +123,21 @@ function push(elem){
 			else{
 				d.innerHTML = '<div class="cross">';
 			}
+			for(var i in arr){
+				var result = checkVictory(arr[i]);
+				if(result == 'cross'){
+					alert('cross win');
+					gameover = true;
+					onemoreGame();
+					break;
+				}
+				else if(result =='round'){
+					alert('round win');
+					gameover = true;
+					onemoreGame();
+					break;
+				}
+			}
 			currentStep++;
 		}
 		if(currentStep == maxStep){
@@ -131,4 +146,27 @@ function push(elem){
 			onemoreGame();
 		}
 	}
+}
+/*Proverka na pobedy */
+function checkVictory(numbers){
+	var flag = 'none';
+	var arr = numbers.split(',');
+	var firstItem = document.getElementById(arr[0]).getElementsByTagName('div')[0];
+	var secondItem = document.getElementById(arr[1]).getElementsByTagName('div')[0];
+	var thirdItem = document.getElementById(arr[2]).getElementsByTagName('div')[0];
+	var fourthItem = document.getElementById(arr[3]).getElementsByTagName('div')[0];
+	if(firstItem && secondItem && thirdItem && fourthItem){
+		firstItem = firstItem.className;
+		secondItem = secondItem.className;
+		thirdItem = thirdItem.className;
+		fourthItem = fourthItem.className;
+
+		if(firstItem == 'round' && secondItem == 'round' && thirdItem == 'round' && fourthItem == 'round'){
+			flag = 'round';
+		}
+		if(firstItem == 'cross' && secondItem == 'cross' && thirdItem == 'cross' && fourthItem == 'cross'){
+			flag = 'cross';
+		}
+	}
+	return flag;
 }
