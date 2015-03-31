@@ -98,9 +98,19 @@ function clean(curStep, mStep){
 		var d = document.getElementById(id+1);
 		d.innerHTML = '';
 	}
+
 	currentStep = curStep;
 	maxStep = mStep;
 	gameover = false;
+
+	if(currentStep % 2 == 0){
+		document.getElementById('score-title-you').style.color = 'red';
+		document.getElementById('score-title-friend').style.color = 'white';
+	}
+	else{
+		document.getElementById('score-title-you').style.color = 'white';
+		document.getElementById('score-title-friend').style.color = 'red';
+	}
 }
 /*K prediduwei stranice */
 function backToPrevPage(){
@@ -118,10 +128,14 @@ function push(elem){
 		var d = document.getElementById(elem);
 		if(d.innerHTML == ''){
 			if(currentStep % 2 == 0){
-				d.innerHTML = '<div class="round">';
+				d.innerHTML = '<div class="cross">';
+				document.getElementById('score-title-you').style.color = 'white';
+				document.getElementById('score-title-friend').style.color = 'red';
 			}
 			else{
-				d.innerHTML = '<div class="cross">';
+				d.innerHTML = '<div class="round">';
+				document.getElementById('score-title-you').style.color = 'red';
+				document.getElementById('score-title-friend').style.color = 'white';
 			}
 			for(var i in arr){
 				var result = checkVictory(arr[i]);
