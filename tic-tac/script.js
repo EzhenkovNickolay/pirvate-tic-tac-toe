@@ -42,6 +42,9 @@ function growDownImage(defId, imgId){
 }
 /*na4alo igri s 4elovekom*/
 function startWithHuman(){
+	myScore = 0;
+	partnerScore = 0;
+
 	var panel = document.getElementById('partner-panel');
 	panel.style.display = 'none';
 
@@ -50,6 +53,12 @@ function startWithHuman(){
 
 	var desk = document.getElementById('score-desk');
 	desk.style.display = 'block';
+
+	var score = document.getElementById('my-score');
+	score.innerHTML = myScore;
+
+	score = document.getElementById('partner-score');
+	score.innerHTML = partnerScore;
 
 	currentPage = 'game';
 }
@@ -141,11 +150,15 @@ function push(elem){
 				var result = checkVictory(arr[i]);
 				if(result == 'cross'){
 					alert('cross win');
+					myScore++;
+					document.getElementById('my-score').innerHTML = myScore;
 					gameover = true;
 					onemoreGame();
 					break;
 				}
 				else if(result =='round'){
+					partnerScore++;
+					document.getElementById('partner-score').innerHTML = partnerScore;
 					alert('round win');
 					gameover = true;
 					onemoreGame();

@@ -1,5 +1,7 @@
 const initMaxStep = 25;
 const initStep = 0;
+var myScore;
+var partnerScore;
 var currentPage = 'main';
 var currentRound = 0;
 var currentStep = 0;
