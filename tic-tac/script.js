@@ -1,3 +1,8 @@
+
+window.onload=function(){
+var song = document.getElementById("mysong");
+song.volume = 0.1;
+}
 /*Functia najatia knopki Single game vizivaet menu vibora soperniika */
 function singleGame(){
 	var content = document.getElementById('menu-bar');

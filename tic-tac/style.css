@@ -17,7 +17,13 @@ button{
 	border: solid 20px green;
 	margin-left: -20%;
 	margin-top: -20%;
+	-webkit-animation: ticTacAnim 1s 1;
 	display:none;
+}
+
+@-webkit-keyframes ticTacAnim{
+	0% { margin-top:-40%;}
+	100% { margin-top:-20%;}
 }
 
 .tic-tap{
@@ -50,10 +56,10 @@ button{
 	left: 50%;
 	margin-left: -200px;
 	margin-top: -165px;
-	-webkit-animation: anim 2s 1;
+	-webkit-animation: animBar 1.5s 1;
 }
 
-@-webkit-keyframes anim{
+@-webkit-keyframes animBar{
 	0% { margin-top:-40%;}
 	50% { margin-top:-100px;}
 	100% { margin-top:-165px;}
@@ -89,7 +95,14 @@ button{
 	text-align: center;
 	border-radius: 25%;
 	box-sizing: border-box;
+	-webkit-animation: partnerAnim 1.5s 1;
 	display:none;
+}
+
+@-webkit-keyframes partnerAnim{
+	0% { margin-top:-40%;}
+	50% { margin-top:-250px;}
+	100% { margin-top:-290px;}
 }
 
 .panel-title{
@@ -132,7 +145,13 @@ button{
 	background-image: url(desk.png);
 	background-repeat: round;
 	text-align: center;
+	-webkit-animation: deskAnim 1s 1;
 	display:none;
+}
+
+@-webkit-keyframes deskAnim{
+	0% { margin-right:100%;}
+	100% { margin-right:0px;}
 }
 
 .score-table{
@@ -207,7 +226,13 @@ button{
 	top: 100%;
 	margin-top: -22%;
 	margin-left: 3%;
+	-webkit-animation: prevPageAnim 0.5s 1;
 	display:none;
+}
+
+@-webkit-keyframes prevPageAnim{
+	0% { margin-top:-40%;}
+	100% { margin-top:-22%;}
 }
 
 .to-prev-page:hover{
